@@ -6,10 +6,10 @@
 
 
 <div align="center">
-
-  <h1><b>Motorbike Back End</b></h1>
+  <h1><b>Motorbike Back-End</b></h1>
 </div>
-
+ 
+ 
 
 <!-- TABLE OF CONTENTS -->
 
@@ -122,11 +122,11 @@ To run tests, run the following command:
 
 👤 **Sane Myburg**
 - GitHub: [@SaneMyburg](https://github.com/SaneMyburg)
-👤 **Sane Myburg**
+👤 **Alishah Safdari**
 - GitHub: [@AliShahSafdari](https://github.com/AliShahSafdari)
-👤 **Sane Myburg**
+👤 **Wilhelm Kamulunga**
 - GitHub: [@WilhelmK109](https://github.com/wilhelmk109)
-👤 **Sane Myburg**
+👤 **Mohammad**
 - GitHub: [@mohametalmeari](https://github.com/mohametalmeari)
 
 <!-- FUTURE FEATURES -->
