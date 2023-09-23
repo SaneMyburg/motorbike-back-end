@@ -1,4 +1,4 @@
 class Motorbike < ApplicationRecord
-  belongs_to :reservations
-  belongs_to :motorbikes
+  belongs_to :user
+  has_many :reservations, dependent: :destroy
 end
