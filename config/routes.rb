@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :users, only: [:index, :create, :destroy, :show] do
-    resources :motorbikes, only: [:index, :create, :destroy] do 
-      resources :reservations, only: [:index, :create, :destroy] 
+  namespace :api do
+    namespace :v1 do
+      resources :users, only: [:index, :show, :create, :destroy] do
+        resources :motorbikes, only: [:index, :create, :destroy]
+        resources :reservations, only: [:index, :create, :destroy]
+      end
+      resources :motorbikes, only: [:index, :create, :destroy]
+      resources :reservations, only: [:index, :create, :destroy]
     end
   end
 end

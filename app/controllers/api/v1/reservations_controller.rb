@@ -1,4 +1,4 @@
-class ReservationsController < ApplicationController
+class Api::V1::ReservationsController < ApplicationController
   def index
     reservation = Reservation.where(user: params[:user_id], motorbike: params[:motorbike_id])
 

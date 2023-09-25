@@ -1,4 +1,4 @@
-class MotorbikesController < ApplicationController
+class Api::V1::MotorbikesController < ApplicationController
   def index
     motors = Motorbike.where(user: params[:user_id])
     render json: motors
