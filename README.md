@@ -3,14 +3,10 @@
  <img src ="Motorbikes.png">
 </div>
 
-
-
 <div align="center">
   <h1><b>Motorbike Back-End</b></h1>
 </div>
  
- 
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -35,7 +31,6 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 [Motorbikes ] <a name="about-project"></a>
-
 
 **Motorbikes** is an rails backend api application.
 
@@ -121,11 +116,14 @@ To run tests, run the following command:
 ## 👥 Author <a name="authors"></a>
 
 👤 **Sane Myburg**
-- GitHub: [@SaneMyburg](https://github.com/SaneMyburg)
+- GitHub: [SaneMyburg](https://github.com/SaneMyburg)
+
 👤 **Alishah Safdari**
 - GitHub: [@AliShahSafdari](https://github.com/AliShahSafdari)
+
 👤 **Wilhelm Kamulunga**
 - GitHub: [@WilhelmK109](https://github.com/wilhelmk109)
+
 👤 **Mohammad**
 - GitHub: [@mohametalmeari](https://github.com/mohametalmeari)
 
