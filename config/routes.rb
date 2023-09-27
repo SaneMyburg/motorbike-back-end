@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       end
       resources :motorbikes, only: [:index, :create, :destroy]
       resources :reservations, only: [:index, :create, :destroy]
+      post 'users/login', to: 'users#login'
     end
   end
 end
