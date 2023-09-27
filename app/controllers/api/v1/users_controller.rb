@@ -32,7 +32,7 @@ class Api::V1::UsersController < ApplicationController
 
   def login
     user = User.find_by(name: user_params[:name])
-  
+
     if user
       render json: user, status: :ok
     else
