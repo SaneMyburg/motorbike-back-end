@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_23_145558) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_28_012420) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,8 +21,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_23_145558) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_motorbikes_on_user_id"
+    t.decimal "finance_fee"
+    t.decimal "total_amount_payable"
+    t.integer "duration"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -42,7 +43,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_23_145558) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "motorbikes", "users"
   add_foreign_key "reservations", "motorbikes"
   add_foreign_key "reservations", "users"
 end

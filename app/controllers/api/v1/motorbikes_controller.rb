@@ -1,6 +1,6 @@
 class Api::V1::MotorbikesController < ApplicationController
   def index
-    motors = Motorbike.where(user: params[:user_id])
+    motors = Motorbike.all
     render json: motors
   end
 
@@ -27,6 +27,7 @@ class Api::V1::MotorbikesController < ApplicationController
   private
 
   def motorbike_params
-    params.require(:motorbike).permit(:name, :description, :price, :photo)
+    params.require(:motorbike).permit(:name, :description, :price, :photo, :duration, :total_amount_payable,
+                                      :finance_fee)
   end
 end
