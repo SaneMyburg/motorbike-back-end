@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
   def show
     user = User.find(params[:id])
     reservations = user.reservations
-    render json: { user: user, reservations: reservations}
+    render json: { user:, reservations: }
   end
 
   def create

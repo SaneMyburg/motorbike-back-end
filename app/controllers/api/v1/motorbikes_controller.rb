@@ -27,6 +27,7 @@ class Api::V1::MotorbikesController < ApplicationController
   private
 
   def motorbike_params
-    params.require(:motorbike).permit(:name, :description, :price, :photo, :duration, :total_amount_payable, :finance_fee)
+    params.require(:motorbike).permit(:name, :description, :price, :photo, :duration, :total_amount_payable,
+                                      :finance_fee)
   end
 end
