@@ -17,6 +17,7 @@ motorbike1 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 5000,
   duration: 48,
+  user: user1,
 )
 
 motorbike2 = Motorbike.create(
@@ -27,6 +28,7 @@ motorbike2 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 4300,
   duration: 48,
+  user: user2,
 )
 
 motorbike3 = Motorbike.create(
@@ -37,6 +39,7 @@ motorbike3 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 8000,
   duration: 48,
+  user: user1,
 )
 
 motorbike4 = Motorbike.create(
@@ -47,6 +50,7 @@ motorbike4 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 3400,
   duration: 48,
+  user: user2,
 )
 
 motorbike5 = Motorbike.create(
@@ -57,6 +61,7 @@ motorbike5 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 5600,
   duration: 48,
+  user: user1,
 )
 
 motorbike6 = Motorbike.create(
@@ -67,4 +72,5 @@ motorbike6 = Motorbike.create(
   finance_fee: 110,
   total_amount_payable: 4600,
   duration: 48,
+  user: user2,
 )
