@@ -21,6 +21,11 @@ RSpec.describe 'api/v1/users', type: :request do
 
       response '422', 'invalid request' do
         let(:user) { { name: 'Ali' } }
+      
+        before do
+          existing_user = User.create(name: 'Ali')
+        end
+      
         run_test!
       end
     end
