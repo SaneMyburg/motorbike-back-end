@@ -1,105 +1,73 @@
 require 'rails_helper'
 require 'swagger_helper'
 
-RSpec.describe 'api/v1/motorbikes', type: :request do
+describe 'Motorbikes API' do
   path '/api/v1/motorbikes' do
-    get('list motorbikes') do
+    get 'Retrieves all motorbikes' do
+      tags 'Motorbikes'
       produces 'application/json'
-      response(200, 'successful') do
-        schema type: :array,
-               items: {
-                 type: :object,
-                 properties: {
-                   id: { type: :integer },
-                   name: { type: :string },
-                   description: { type: :text },
-                   price: { type: :decimal },
-                   photo: { type: :string },
-                   finance_fee: { type: :decimal },
-                   total_amount_payable: { type: :decimal },
-                   duration: {type: :integer}
-                 },
-                 required: %w[id name description price photo finance_fee total_amount_payable duration]
-               }
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+
+      response '200', 'motorbikes found' do
         run_test!
       end
     end
-  end
 
-  path '/api/v1/motorbikes' do
     post 'Creates a motorbike' do
-      consumes 'multipart/form-data'
+      tags 'Motorbikes'
+      consumes 'application/json'
       parameter name: :motorbike, in: :body, schema: {
         type: :object,
         properties: {
-            name: { type: :string },
-            description: { type: :text },
-            price: { type: :decimal },
-            photo: { type: :string },
-            finance_fee: { type: :decimal },
-            total_amount_payable: { type: :decimal },
-            duration: {type: :integer}
-            user_id: { type: :bigint }
-          },
-          required: ['name', 'description', 'price', 'photo', 'finance_fee', 'taotal_amount_payable','duration', 'user_id']
-        }
-
+          name: { type: :string },
+          description: { type: :string },
+          price: { type: :number },
+          photo: { type: :string },
+          duration: { type: :integer },
+          total_amount_payable: { type: :number },
+          finance_fee: { type: :number },
+          user_id: { type: :integer },
+        },
+        required: ['name', 'user_id']
+      }
 
       response '201', 'motorbike created' do
-        let(:motorbike) do
-          { name: 'New bike', description: 'it is best', price: 200 , photo: 'http/:first', finance_fee: 10,
-            total_amount_payable: 300 , user_id: 1 }
-        end
+        let(:motorbike) { { name: 'Suzuki CB1100', user_id: 1, description: '...', price: 2500, photo: '...', duration: 50, total_amount_payable: 5500, finance_fee: 180 } }
         run_test!
       end
 
       response '422', 'invalid request' do
-
-        let(:motorbike) { { name: 'New bike' } }
-        before do
-            existing_motorbike = Motorbike.create(name: 'New bike')
-          end
+        let(:motorbike) { { name: 'Suzuki CB1100', user_id: nil } }
         run_test!
       end
     end
-  end
 
-  path '/api/v1/motorbikes/{id}' do
-    parameter name: 'id', in: :path, type: :string, description: 'id'
+    get 'Retrieves a specific motorbike' do
+      tags 'Motorbikes'
+      produces 'application/json'
+      parameter name: :id, in: :path, type: :integer, description: 'ID of the motorbike'
 
-    delete('delete motorbike') do
-      response('204', 'successful') do
-        let(:id) { '123' }
+      response '200', 'motorbike found' do
+        let(:id) { create(:motorbike).id }
+        run_test!
+      end
 
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+      response '404', 'motorbike not found' do
+        let(:id) { 999 }
         run_test!
       end
     end
-  end
 
-  path '/api/v1/motorbikes/index' do
-    get('index motorbike') do
-      response(200, 'successful') do
-        after do |example|
-          example.metadata[:response][:content] = {
-            'application/json' => {
-              example: JSON.parse(response.body, symbolize_names: true)
-            }
-          }
-        end
+    delete 'Deletes a specific motorbike' do
+      tags 'Motorbikes'
+      parameter name: :id, in: :path, type: :integer, description: 'ID of the motorbike'
+
+      response '204', 'motorbike deleted' do
+        let(:id) { create(:motorbike).id }
+        run_test!
+      end
+
+      response '404', 'motorbike not found' do
+        let(:id) { 999 }
         run_test!
       end
     end
