@@ -1,5 +1,6 @@
 class Motorbike < ApplicationRecord
   has_many :reservations, dependent: :destroy
+  belongs_to :user
 
   validates :price, numericality: { greater_than: 0 }
   validates :name, length: { maximum: 255 }
