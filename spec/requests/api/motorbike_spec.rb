@@ -11,8 +11,12 @@ describe 'Motorbikes API' do
         response '200', 'motorbikes found' do
           run_test!
         end
+      end
+    end
+  end
+end
 RSpec.describe 'api/v1/motorbikes', type: :request do
-  let(:user) { User.create(name: 'testuser') } 
+  let(:user) { User.create(name: 'testuser') }
 
   let(:motorbike_params) do
     {
@@ -34,20 +38,20 @@ RSpec.describe 'api/v1/motorbikes', type: :request do
 
       response(200, 'successful') do
         schema(type: :array, items: {
-          type: :object,
-          properties: {
-            id: { type: :integer },
-            name: { type: :string },
-            description: { type: :text },
-            price: { type: :string },
-            photo: { type: :string },
-            finance_fee: { type: :decimal },
-            total_amount_payable: { type: :decimal },
-            duration: { type: :integer },
-            user_id: { type: :bigint }
-          },
-          required: %w[id name description price photo finance_fee total_amount_payable duration user_id]
-        })
+                 type: :object,
+                 properties: {
+                   id: { type: :integer },
+                   name: { type: :string },
+                   description: { type: :text },
+                   price: { type: :string },
+                   photo: { type: :string },
+                   finance_fee: { type: :decimal },
+                   total_amount_payable: { type: :decimal },
+                   duration: { type: :integer },
+                   user_id: { type: :bigint }
+                 },
+                 required: %w[id name description price photo finance_fee total_amount_payable duration user_id]
+               })
 
         run_test!
       end
@@ -81,11 +85,6 @@ RSpec.describe 'api/v1/motorbikes', type: :request do
           end
           run_test!
         end
-
-        # response '422', 'invalid request' do
-        #   let(:motorbike) { { name: 'Suzuki CB1100', user_id: nil } }
-        #   run_test!
-        # end
       end
     end
   end

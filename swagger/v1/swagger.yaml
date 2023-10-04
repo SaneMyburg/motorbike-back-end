@@ -6,12 +6,48 @@ info:
 paths:
   "/api/v1/motorbikes":
     get:
-      summary: Retrieves all motorbikes
+      summary: list motorbikes
       tags:
       - Motorbikes
       responses:
         '200':
-          description: motorbikes found
+          description: successful
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    description:
+                      type: text
+                    price:
+                      type: string
+                    photo:
+                      type: string
+                    finance_fee:
+                      type: decimal
+                    total_amount_payable:
+                      type: decimal
+                    duration:
+                      type: integer
+                    user_id:
+                      type: bigint
+                  required:
+                  - id
+                  - name
+                  - description
+                  - price
+                  - photo
+                  - finance_fee
+                  - total_amount_payable
+                  - duration
+                  - user_id
+      description: List all motorbikes
     post:
       summary: Creates a motorbike
       tags:
