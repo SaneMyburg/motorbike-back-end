@@ -1,13 +1,9 @@
  <a name="readme-top"></a>
-<div align="center">
- <img src ="Motorbikes.png">
-</div>
 
 <div align="center">
-  <h1><b>Motorbike Back-End</b></h1>
+  <h1><b>Motorbikes Booking</b></h1>
 </div>
- 
-<!-- TABLE OF CONTENTS -->
+
 
 # 📗 Table of Contents
 
@@ -28,44 +24,50 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-<!-- PROJECT DESCRIPTION -->
 
-# 📖 [Motorbikes ] <a name="about-project"></a>
+# 📖 [Motorbikes Booking ] <a name="about-project"></a>
 
-**Motorbikes** is an rails backend api application.
+The Backend for Motorbikes Booking app. Built using Ruby on Rails.
 
-[Front-End Project](https://github.com/SaneMyburg/motorbike-front-end)
+# Database Schema <a name="database-schema"></a>
+<div align="center">
+ <img src ="Motorbikes.png">
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Link to [Front-End Project](https://github.com/SaneMyburg/motorbike-front-end)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  
   <ul>
-    <li>ruby</li>
-    <li>rails</li>
+    <li>Ruby on Rails </li>
   </ul>
 </details>
 
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-
-- **Returns random selected greetings**
+- **Authentication**
+- **CRUD**
+- **Motorbikes Image Upload**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 To get a local copy up and running, follow these steps:
 
+- Install Git.
+- Install Ruby
+- Install Ruby on Rails
 - Clone this repo as described in the setup section. 
-- Make modifications as peferred 
 
 
 ### Prerequisites
@@ -90,28 +92,24 @@ For more information on how to clone or fork a repository:
 
 ### Install
 
-- Run ` npm install ` for linters
 - Run ` bundle install `
+- Run ` bundle exec rails db:create db:migrate `
 
 ### Usage
 
 To run the project, execute the following command:
 
 - Run ` bundle exec rails server`
-- Run ` npm run build`
 
 ### Run tests
 
 To run tests, run the following command:
 
 - to test ruby linter errors  `rubocop`
-
-- to test the classes ` rails c`
  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
 
 ## 👥 Author <a name="authors"></a>
 
@@ -127,17 +125,15 @@ To run tests, run the following command:
 👤 **Mohammad**
 - GitHub: [@mohametalmeari](https://github.com/mohametalmeari)
 
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Future changes:
-- Add animations and transitions
-- Add more styles and colors
+- Email and password authentication
+- Authorization
+- UX improvements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -147,7 +143,6 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/motorbike-bac
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
@@ -156,21 +151,19 @@ Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Thanks to all Microverse community
+- We would like to thank [Microverse](https://www.microverse.org/) for giving us this opportunity.
+
+- We would like to thank [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for the original design.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- LICENSE -->
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
