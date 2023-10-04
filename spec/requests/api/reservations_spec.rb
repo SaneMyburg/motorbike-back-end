@@ -21,9 +21,9 @@ describe 'Reservations API' do
           date: { type: :date },
           city: { type: :string },
           user_id: { type: :integer },
-          motorbike_id: { type: :integer },
+          motorbike_id: { type: :integer }
         },
-        required: ['date', 'city', 'user_id', 'motorbike_id']
+        required: %w[date city user_id motorbike_id]
       }
 
       response '201', 'reservation created' do
