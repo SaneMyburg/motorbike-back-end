@@ -32,7 +32,7 @@ The Backend for Motorbikes Booking app. Built using Ruby on Rails.
 # [Kanban Board] <a name="kanban-board"></a>
 - Link to [Kanban Board](https://github.com/users/SaneMyburg/projects/5/views/1)
 - We are a team of 4 members.
-- Link to [Picture of Kanban]()
+- Link to [Picture of Kanban](https://drive.google.com/file/d/1Q_aer4Fml9QYXLS2aR94h-GbAtVGUdOK/view?usp=drive_link)
 
 # Database Schema <a name="database-schema"></a>
 <div align="center">
