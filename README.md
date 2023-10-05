@@ -4,10 +4,10 @@
   <h1><b>Motorbikes Booking</b></h1>
 </div>
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
+  - [Kanban Board](#kanban-board)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -28,6 +28,11 @@
 # 📖 [Motorbikes Booking ] <a name="about-project"></a>
 
 The Backend for Motorbikes Booking app. Built using Ruby on Rails.
+
+# [Kanban Board] <a name="kanban-board"></a>
+- Link to [Kanban Board](https://github.com/users/SaneMyburg/projects/5/views/1)
+- We are a team of 4 members.
+- Link to [Picture of Kanban]()
 
 # Database Schema <a name="database-schema"></a>
 <div align="center">
