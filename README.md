@@ -67,13 +67,13 @@ To get a local copy up and running, follow these steps:
 - Install Git.
 - Install Ruby
 - Install Ruby on Rails
-- Clone this repo as described in the setup section. 
-
+- Clone this repo as described in the setup section.
+- cd motorbike-back-end
+- rails s -p 4000 
 
 ### Prerequisites
 
 In order to run this project you need: To clone or fork and run it in a browser
-
 
 ### Setup
 
@@ -99,7 +99,7 @@ For more information on how to clone or fork a repository:
 
 To run the project, execute the following command:
 
-- Run ` bundle exec rails server`
+- Run ` bundle exec rails server -p 4000`
 
 ### Run tests
 
@@ -107,9 +107,7 @@ To run tests, run the following command:
 
 - to test ruby linter errors  `rubocop`
  
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 👥 Author <a name="authors"></a>
 
@@ -125,7 +123,6 @@ To run tests, run the following command:
 👤 **Mohammad**
 - GitHub: [@mohametalmeari](https://github.com/mohametalmeari)
 
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - Email and password authentication
@@ -133,7 +130,6 @@ To run tests, run the following command:
 - UX improvements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -143,14 +139,11 @@ Feel free to check the [issues page](https://github.com/SaneMyburg/motorbike-bac
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## ⭐️ Show your support <a name="support"></a>
-
 
 Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
@@ -158,9 +151,7 @@ Give a ⭐️ if you like this project!
 
 - We would like to thank [Murat Korkmaz on Behance](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) for the original design.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
