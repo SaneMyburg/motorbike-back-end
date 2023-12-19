@@ -17,6 +17,4 @@ test:
 
 production:
   <<: *default
-  database: motorbike_back_end_production
-  username: motorbike_back_end
-  password: <%= ENV["MOTORBIKE_BACK_END_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
