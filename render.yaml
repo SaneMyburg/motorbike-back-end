@@ -6,7 +6,7 @@ databases:
 
 services:
   - type: web
-    name: smmartbudget
+    name: motorbikehire
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "./bin/rails server"
