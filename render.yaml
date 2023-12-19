@@ -2,13 +2,14 @@ databases:
   - name: motor
     databaseName: motor_4xdo
     user: motor_4xdo_user
+    plan: free
 
 services:
   - type: web
     name: smmartbudget
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
-    startCommand: "bundle exec puma -C config/puma.rb"
+    startCommand: "./bin/rails server"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -16,3 +17,5 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+        key: WEB_CONCURRENCY
+        value: 2 # sensible default
